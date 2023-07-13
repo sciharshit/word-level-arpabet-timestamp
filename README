@@ -1,0 +1,45 @@
+# Readme
+
+This project transcribes audio files into text and further converts the text into ARPAbet phonemes with start and end timestamps. It primarily utilizes `whisper` for speech-to-text conversion, `nltk` for dictionary access, `g2p_en` for grapheme to phoneme conversion, and `json` for output formatting.
+
+## Dependencies
+
+To execute the code in this project, the following Python libraries are required:
+
+- `whisper_timestamped`: A library used for automatic speech recognition (ASR). At the time of my knowledge cut-off (September 2021), there isn't a library named `whisper_timestamped`. pip3 install git+https://github.com/linto-ai/whisper-timestamped
+- `nltk`: The Natural Language Toolkit, or more commonly NLTK, is a suite of libraries and programs for symbolic and statistical natural language processing (NLP) for English written in the Python programming language.
+- `cmudict`: This is not a standalone library, but a corpus that comes with `nltk`. It's a large pronunciation dictionary of English words.
+- `json`: A built-in Python library for dealing with JSON data.
+- `g2p_en`: A library used for Grapheme-to-Phoneme Conversion. It converts written text into the phonemes that represent spoken language.
+
+Please make sure that you have the latest versions of these libraries to avoid any discrepancies.
+
+## Installation 
+
+You can install the necessary libraries using pip:
+
+```bash
+pip install nltk
+pip install g2p_en
+```
+
+To download the required NLTK corpus:
+
+```python
+import nltk
+nltk.download('cmudict')
+```
+
+## Running the Code
+
+Once you have installed the necessary dependencies, you can run the code by:
+
+1. Importing the necessary libraries.
+2. Loading the audio file and ASR model.
+3. Transcribing the audio to text.
+4. Converting the transcribed text to phonemes with timestamps.
+5. Saving the result as a JSON file.
+
+Ensure you have the necessary audio file and model in your directory. You may need to adjust file paths or names according to your specific setup.
+
+Note: This README is based on the information available up until September 2021, and some details might have changed for software/tools used after this date.
